@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+
+        int number, remainder;
+        Scanner asal = new Scanner(System.in);
+        System.out.print("Asallığı sorgulanan sayıyı girin= ");
+        number = asal.nextInt();
+        Boolean isPrime = true;
+        if (number == 1 && number < 1) {
+            System.out.print("Geçersiz sayı");
+        }
+        for (int i = 2; i < number; i++) {
+            if (number % i == 0) {
+                isPrime=false;}
+            }
+        if (isPrime){
+            System.out.print(number+" asal");
+        }
+        else {
+            System.out.print(number+" asal değil");
+        }
+        }
+    }

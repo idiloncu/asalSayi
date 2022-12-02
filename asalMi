@@ -22,3 +22,51 @@ public class Main {
         }
         }
     }
+    
+    //C# ile yazımı:
+    
+    using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp5
+{
+    internal class Program
+    {
+        // Girilen Sayının Asal Olup Olmadıgını Bulan Program
+        static void Main(string[] args)
+        {
+            int sayi;
+            bool asalMi=false;
+            Console.WriteLine("Asallıgı sorgulanacak sayıyı girin: ");
+            sayi = Convert.ToInt32(Console.ReadLine());
+
+            if (sayi==0 || sayi==1)
+            {
+                Console.WriteLine("GEÇERSİZ SAYI");
+            }
+
+            for (int i =2; i < sayi ; i++)
+            {
+                if ((sayi / i) != 0)
+                {
+                    asalMi= true;
+                }
+
+            }
+            if (asalMi==true)
+            {
+                Console.WriteLine("Sayınız Asal");
+
+            }
+            else
+            Console.WriteLine("Sayınız asal değil");
+
+
+            Console.ReadKey();
+        }
+    }
+}
+
